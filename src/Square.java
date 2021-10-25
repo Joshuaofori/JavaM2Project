@@ -9,6 +9,10 @@ public class Square {
         this.verticalIndex=verticalIndex;
         this.nation=nation;
     }
+    public Square(int verticalIndex, int horizontalIndex){
+        this.horizontalIndex=horizontalIndex;
+        this.verticalIndex=verticalIndex;
+    }
 
     public int getVerticalIndex() {
         return verticalIndex;

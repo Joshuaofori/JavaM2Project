@@ -1,4 +1,4 @@
-public class Being {
+public class Being extends Square{
    private String[] messages;
    private int energyPoints=100;
    private final int MAX_NUMBER_OF_MESSAGES=20;
