@@ -1,4 +1,7 @@
 public class CommonBeing extends Being{
+    public CommonBeing(){
+        super();
+    }
     public void takeMessages(String[] messages){
 
     }

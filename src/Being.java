@@ -7,6 +7,9 @@ public class Being {
    public Being(){}
 
 
+    public void move(){
+
+    }
     public Nation getNation() {
         return nation;
     }
