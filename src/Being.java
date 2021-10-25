@@ -44,6 +44,6 @@ public class Being {
     }
 
     public void setNumberOfMessages(int numberOfMessages) {
-        this.numberOfMessages = numberOfMessages;
+        this.numberOfMessages = numberOfMessages ;
     }
 }
