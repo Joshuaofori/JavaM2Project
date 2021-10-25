@@ -1,2 +1,2 @@
-public class Obstacle extends SimulataionObject{
+public class Obstacle extends  SimulationObject{
 }

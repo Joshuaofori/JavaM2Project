@@ -1,10 +1,15 @@
-public class Being extends Square{
+public class Being extends SimulationObject{
    private String[] messages;
    private int energyPoints=100;
    private final int MAX_NUMBER_OF_MESSAGES=20;
    private int numberOfMessages=0;
    private Nation nation;
-   public Being(){}
+
+    public Being(){
+       super();
+       if(!super.isObstacle())
+       this.nation=super.getNation();
+    }
 
 
     public void move(){
