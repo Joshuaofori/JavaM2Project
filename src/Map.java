@@ -42,7 +42,17 @@ public class Map {
         for(int i=0;i<8;i++){
             for(int j=0;j<14;j++){
                 if(squares[i][j]!=null){
-                    System.out.print("B ");
+                    if(!squares[i][j].getSimulationObject().isObstacle()){
+                     if(squares[i][j].getSimulationObject().getNation()==Nation.JEDI){
+                         System.out.print("J ");}
+                     if(squares[i][j].getSimulationObject().getNation()==Nation.REBELS){
+                            System.out.print("R ");}
+                     if(squares[i][j].getSimulationObject().getNation()==Nation.GALACTIC_EMPIRE){
+                         System.out.print("G ");}
+                     if(squares[i][j].getSimulationObject().getNation()==Nation.STORMTROOPERSS){
+                         System.out.print("S ");}
+                    }
+
                 }
                 else {
                     System.out.print("* ");

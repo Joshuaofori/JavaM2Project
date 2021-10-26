@@ -48,15 +48,15 @@ public class Square {
                System.out.println("Common rebel created");
             }
             if(simulationObject.getNation()==Nation.JEDI){
-                setSimulationObject(new CommonJedi());
+                setSimulationObject(simulationObject);
                 System.out.println("Common jedi created");
             }
             if(simulationObject.getNation()==Nation.GALACTIC_EMPIRE){
-                setSimulationObject(new CommonGalacticEmpire());
+                setSimulationObject(simulationObject);
                 System.out.println("Common galatic empire created");
             }
             if(simulationObject.getNation()==Nation.STORMTROOPERSS){
-                setSimulationObject(new CommonStormStroopers());
+                setSimulationObject(simulationObject);
                 System.out.println("Common rebel storm Strooper created");
             }
         }
