@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Random;
 
-public class Being extends SimulationObject{
+public class Being {
    private String[] messages;
 
    private int energyPoints=100;
@@ -12,7 +12,6 @@ public class Being extends SimulationObject{
 
     public Being(){
        super();
-       if(!super.isObstacle())
        random= new Random();
     }
 

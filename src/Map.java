@@ -16,6 +16,18 @@ public class Map {
    generateBeings();
    generateObstacle();
     }
+    public void startSimulation(){
+        for(int i=0;i<8;i++){
+            for(int j=0;j<14;j++){
+               if(squares[i][j]!=null&&!squares[i][j].getSimulationObject().isObstacle()){
+                   //System.out.println(squares[i][j].getSimulationObject().getNation());
+                  System.out.println( squares[i][j].getSimulationObject().getObject());
+
+
+               }
+            }
+        }
+    }
  private void generateSqures(){
     squares= new Square[m][n];
   }
@@ -44,15 +56,15 @@ public class Map {
                 r -= (r > 4 && c > 10 && aNation != Nation.STORMTROOPERSS) ? 3 : 0;
             }
 
-         //   squares[r][c]= new Square(r,c,new SimulationObject(aNation),m,n);
-            if(aNation==Nation.JEDI)
-            squares[r][c]= new Square(r,c,new CommonJedi(),m,n);
-            if(aNation==Nation.REBELS)
-                squares[r][c]= new Square(r,c,new CommonRebels(),m,n);
-            if(aNation==Nation.STORMTROOPERSS)
-                squares[r][c]= new Square(r,c,new CommonStormStroopers(),m,n);
-            if(aNation==Nation.GALACTIC_EMPIRE)
-                squares[r][c]= new Square(r,c,new CommonGalacticEmpire(),m,n);
+           squares[r][c]= new Square(r,c,new SimulationObject(aNation),m,n);
+//            if(aNation==Nation.JEDI)
+//            squares[r][c]= new Square(r,c,new CommonJedi(),m,n);
+//            if(aNation==Nation.REBELS)
+//                squares[r][c]= new Square(r,c,new CommonRebels(),m,n);
+//            if(aNation==Nation.STORMTROOPERSS)
+//                squares[r][c]= new Square(r,c,new CommonStormStroopers(),m,n);
+//            if(aNation==Nation.GALACTIC_EMPIRE)
+//                squares[r][c]= new Square(r,c,new CommonGalacticEmpire(),m,n);
 //
 
         }}
