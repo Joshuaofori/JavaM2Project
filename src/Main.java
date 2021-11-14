@@ -3,6 +3,8 @@ public class Main {
         Map m = new Map();
         m.printMap();
         m.startSimulation();
+        System.out.println("afer First Move");
+        m.printMap();
 
     }
 }

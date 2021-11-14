@@ -17,11 +17,16 @@ public class Map {
    generateObstacle();
     }
     public void startSimulation(){
+        int positionX=0;
+        int positionY=0;
         for(int i=0;i<8;i++){
             for(int j=0;j<14;j++){
                if(squares[i][j]!=null&&!squares[i][j].getSimulationObject().isObstacle()){
                    //System.out.println(squares[i][j].getSimulationObject().getNation());
-                  System.out.println( squares[i][j].getSimulationObject().getObject());
+                   positionX=squares[i][j].getSimulationObject().getObject().move(getAvailableSpacesToFill())[0];
+                   positionY=squares[i][j].getSimulationObject().getObject().move(getAvailableSpacesToFill())[1];
+                   squares[positionX][positionY]=squares[i][j];
+                   squares[i][j]=null;
 
 
                }
