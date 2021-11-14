@@ -21,7 +21,12 @@ public class Map {
         int positionY=0;
         for(int i=0;i<8;i++){
             for(int j=0;j<14;j++){
+                if(i==0&&j==0)continue;
+                if(i==m-1&&j==0)continue;
+                if(i==0&&j==n-1)continue;
+                if(i==m-1&&j==n-1)continue;
                if(squares[i][j]!=null&&!squares[i][j].getSimulationObject().isObstacle()){
+
                    //System.out.println(squares[i][j].getSimulationObject().getNation());
                    positionX=squares[i][j].getSimulationObject().getObject().move(getAvailableSpacesToFill())[0];
                    positionY=squares[i][j].getSimulationObject().getObject().move(getAvailableSpacesToFill())[1];
