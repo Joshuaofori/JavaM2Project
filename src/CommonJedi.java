@@ -5,4 +5,9 @@ public class CommonJedi extends GoodCommonBeing {
         super.setNation(Nation.JEDI);
 
     }
+
+    @Override
+    public void move() {
+
+    }
 }

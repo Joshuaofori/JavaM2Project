@@ -4,4 +4,9 @@ public class CommonStormStroopers extends EvilCommonBeing {
         super();
         super.setNation(Nation.STORMTROOPERSS);
     }
+
+    @Override
+    public void move() {
+
+    }
 }

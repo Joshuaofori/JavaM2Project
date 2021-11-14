@@ -1,10 +1,6 @@
 public class Main {
     public static void main(String[] args){
-        Map m = new Map();
-        m.printMap();
+        Map m = new Map(8, 14);
         m.startSimulation();
-        System.out.println("afer First Move");
-        m.printMap();
-
     }
 }

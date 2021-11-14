@@ -4,4 +4,9 @@ public class CommonGalacticEmpire extends EvilCommonBeing {
         super();
         super.setNation(Nation.GALACTIC_EMPIRE);
     }
+
+    @Override
+    public void move() {
+
+    }
 }
