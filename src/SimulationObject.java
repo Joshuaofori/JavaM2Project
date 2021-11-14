@@ -5,8 +5,11 @@ public class SimulationObject {
     public SimulationObject(){}
     public SimulationObject(Nation nation){
         this.nation=nation;
-
+        if(this.nation==null)
+            isObstacle=true;
     }
+
+
     public void setSquare(Square square){
         this.square=square;
     }
@@ -26,9 +29,6 @@ public class SimulationObject {
         return isObstacle;
     }
 
-    public void setBeing() {
-    if(this.nation==null)
-        isObstacle=true;
-    }
+
 
 }

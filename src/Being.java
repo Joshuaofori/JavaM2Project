@@ -1,27 +1,30 @@
+import java.util.List;
+import java.util.Random;
+
 public class Being extends SimulationObject{
    private String[] messages;
+
    private int energyPoints=100;
    private final int MAX_NUMBER_OF_MESSAGES=20;
    private int numberOfMessages=0;
-   private Nation nation;
+
+    Random random;
 
     public Being(){
        super();
        if(!super.isObstacle())
-       this.nation=super.getNation();
+       random= new Random();
     }
 
 
-    public void move(){
+    public int[] move(List<List<Integer>> spacesToFill){
+        int positions[]= new int[2];
+        positions[0] = spacesToFill.get(0).get(random.nextInt(spacesToFill.get(0).size()));
+        positions[1] = spacesToFill.get(1).get(random.nextInt(spacesToFill.get(1).size()));
+        return positions;
 
     }
-    public Nation getNation() {
-        return nation;
-    }
 
-    public void setNation(Nation nation) {
-        this.nation = nation;
-    }
 
     public String[] getMessages() {
         return messages;
