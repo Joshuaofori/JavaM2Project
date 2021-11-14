@@ -1,6 +1,6 @@
-public class GoodCommonBeing extends CommonBeing {
+public abstract class GoodCommonBeing extends CommonBeing {
 
-    public GoodCommonBeing(){
-     super();
+    public GoodCommonBeing() {
+        super();
     }
 }
