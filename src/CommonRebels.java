@@ -1,10 +1,7 @@
-import java.util.List;
+public class CommonRebels extends GoodCommonBeing {
 
-public class CommonRebels extends GoodCommonBeing{
-    public CommonRebels(){
+    public CommonRebels() {
         super();
-         super.setNation(Nation.REBELS);
+        super.setNation(Nation.REBELS);
     }
-
-
 }

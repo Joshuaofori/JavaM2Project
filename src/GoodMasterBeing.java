@@ -1,2 +1,6 @@
-public class GoodMasterBeing extends MasterBeing {
+public abstract class GoodMasterBeing extends MasterBeing {
+
+    public GoodMasterBeing() {
+        super();
+    }
 }

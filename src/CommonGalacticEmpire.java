@@ -1,9 +1,7 @@
 public class CommonGalacticEmpire extends EvilCommonBeing {
-    public CommonGalacticEmpire(){
+
+    public CommonGalacticEmpire() {
         super();
- super.setNation(Nation.GALACTIC_EMPIRE);
-
+        super.setNation(Nation.GALACTIC_EMPIRE);
     }
-
-
 }

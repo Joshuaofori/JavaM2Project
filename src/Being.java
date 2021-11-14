@@ -1,7 +1,7 @@
 import java.util.List;
 import java.util.Random;
 
-public class Being {
+public abstract class Being {
    private String[] messages;
 
    private int energyPoints=100;

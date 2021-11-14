@@ -1,9 +1,7 @@
-public class CommonStormStroopers extends EvilCommonBeing{
-    public CommonStormStroopers(){
+public class CommonStormStroopers extends EvilCommonBeing {
+
+    public CommonStormStroopers() {
         super();
-  super.setNation(Nation.STORMTROOPERSS);
-
+        super.setNation(Nation.STORMTROOPERSS);
     }
-
-
 }
