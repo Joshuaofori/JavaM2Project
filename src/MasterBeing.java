@@ -21,9 +21,4 @@ public abstract class MasterBeing extends Being {
     public boolean hasCollectedAllMessage() {
         return collectedAllMessages;
     }
-
-    @Override
-    public void move() {
-        // MASTERS ARE STATIC
-    }
 }

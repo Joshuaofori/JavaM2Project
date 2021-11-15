@@ -3,7 +3,7 @@ public abstract class Square {
     private int horizontalIndex;
     private SimulationObject simulationObject;
 
-    public Square(int verticalIndex, int horizontalIndex) {
+    public Square(int horizontalIndex, int verticalIndex) {
         this.horizontalIndex = horizontalIndex;
         this.verticalIndex = verticalIndex;
     }

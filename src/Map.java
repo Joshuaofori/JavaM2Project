@@ -1,10 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Map {
-    private int m, n;
+    private final int m;
+    private final int n;
 
     private Square[][] squares;
-    private Being[] beings;
+    private List<Being> beings;
 
     Random random;
 
@@ -18,7 +21,29 @@ public class Map {
         printMap();
     }
 
+    public int getM() {
+        return m;
+    }
+
+    public int getN() {
+        return n;
+    }
+
+    public Square[][] getSquares() {
+        return squares;
+    }
+
     public void startSimulation() {
+        int j = 0;
+        while (true) {
+            for (int i = 0; i < beings.size(); i++) {
+                beings.get(i).move();
+            }
+
+            printMap();
+            j++;
+            if(j == 5)break;
+        }
     }
 
     private void generateSquares() {
@@ -42,47 +67,71 @@ public class Map {
     }
 
     private void generateBeings() {
-        beings = new Being[20];
+        beings = new ArrayList<Being>();
 
-        beings[0] = MasterGalacticEmpire.getInstance();
-        beings[0].setSquare(squares[0][0]);
-        squares[0][0].setSimulationObject(beings[0]);
-        beings[1] = new CommonGalacticEmpire();
-        beings[1].setSquare(squares[0][1]);
-        squares[0][1].setSimulationObject(beings[1]);
-        beings[2] = new CommonGalacticEmpire();
-        beings[2].setSquare(squares[1][1]);
-        squares[1][1].setSimulationObject(beings[2]);
+        MasterGalacticEmpire mge = MasterGalacticEmpire.getInstance();
+        mge.setSquare(squares[0][0]);
+        squares[0][0].setSimulationObject(mge);
+        mge.setMap(this);
+        beings.add(mge);
+        CommonGalacticEmpire cge1 = new CommonGalacticEmpire();
+        cge1.setSquare(squares[0][1]);
+        squares[0][1].setSimulationObject(cge1);
+        cge1.setMap(this);
+        beings.add(cge1);
+        CommonGalacticEmpire cge2 = new CommonGalacticEmpire();
+        cge2.setSquare(squares[1][1]);
+        squares[1][1].setSimulationObject(cge2);
+        cge2.setMap(this);
+        beings.add(cge2);
 
-        beings[3] = MasterStormStroopers.getInstance();
-        beings[3].setSquare(squares[m - 1][0]);
-        squares[m - 1][0].setSimulationObject(beings[3]);
-        beings[4] = new CommonStormStroopers();
-        beings[4].setSquare(squares[m - 2][0]);
-        squares[m - 2][0].setSimulationObject(beings[4]);
-        beings[5] = new CommonStormStroopers();
-        beings[5].setSquare(squares[m - 2][1]);
-        squares[m - 2][1].setSimulationObject(beings[5]);
+        MasterStormStroopers mst = MasterStormStroopers.getInstance();
+        mst.setSquare(squares[m - 1][0]);
+        squares[m - 1][0].setSimulationObject(mst);
+        mst.setMap(this);
+        beings.add(mst);
+        CommonStormStroopers cst1 = new CommonStormStroopers();
+        cst1.setSquare(squares[m - 2][0]);
+        squares[m - 2][0].setSimulationObject(cst1);
+        cst1.setMap(this);
+        beings.add(cst1);
+        CommonStormStroopers cst2 = new CommonStormStroopers();
+        cst2.setSquare(squares[m - 2][1]);
+        squares[m - 2][1].setSimulationObject(cst2);
+        cst2.setMap(this);
+        beings.add(cst2);
 
-        beings[6] = MasterJedi.getInstance();
-        beings[6].setSquare(squares[0][n - 1]);
-        squares[0][n - 1].setSimulationObject(beings[6]);
-        beings[7] = new CommonJedi();
-        beings[7].setSquare(squares[0][n - 2]);
-        squares[0][n - 2].setSimulationObject(beings[7]);
-        beings[8] = new CommonJedi();
-        beings[8].setSquare(squares[1][n - 2]);
-        squares[1][n - 2].setSimulationObject(beings[8]);
+        MasterJedi mj = MasterJedi.getInstance();
+        mj.setSquare(squares[0][n - 1]);
+        squares[0][n - 1].setSimulationObject(mj);
+        mj.setMap(this);
+        beings.add(mj);
+        CommonJedi cj1 = new CommonJedi();
+        cj1.setSquare(squares[0][n - 2]);
+        squares[0][n - 2].setSimulationObject(cj1);
+        cj1.setMap(this);
+        beings.add(cj1);
+        CommonJedi cj2 = new CommonJedi();
+        cj2.setSquare(squares[1][n - 2]);
+        squares[1][n - 2].setSimulationObject(cj2);
+        cj2.setMap(this);
+        beings.add(cj2);
 
-        beings[9] = MasterRebel.getInstance();
-        beings[9].setSquare(squares[m - 1][n - 1]);
-        squares[m - 1][n - 1].setSimulationObject(beings[9]);
-        beings[10] = new CommonRebel();
-        beings[10].setSquare(squares[m - 2][n - 1]);
-        squares[m - 2][n - 1].setSimulationObject(beings[10]);
-        beings[11] = new CommonRebel();
-        beings[11].setSquare(squares[m - 2][n - 2]);
-        squares[m - 2][n - 2].setSimulationObject(beings[11]);
+        MasterRebel mr = MasterRebel.getInstance();
+        mr.setSquare(squares[m - 1][n - 1]);
+        squares[m - 1][n - 1].setSimulationObject(mr);
+        mr.setMap(this);
+        beings.add(mr);
+        CommonRebel cr1 = new CommonRebel();
+        cr1.setSquare(squares[m - 2][n - 1]);
+        squares[m - 2][n - 1].setSimulationObject(cr1);
+        cr1.setMap(this);
+        beings.add(cr1);
+        CommonRebel cr2 = new CommonRebel();
+        cr2.setSquare(squares[m - 2][n - 2]);
+        squares[m - 2][n - 2].setSimulationObject(cr2);
+        cr2.setMap(this);
+        beings.add(cr2);
     }
 
     private void generateObstacle() {
@@ -120,5 +169,6 @@ public class Map {
             }
             System.out.println();
         }
+        System.out.println();
     }
 }

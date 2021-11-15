@@ -1,6 +1,6 @@
 public class NeutralZone extends Square {
 
-    public NeutralZone(int verticalIndex, int horizontalIndex) {
+    public NeutralZone(int horizontalIndex, int verticalIndex) {
         super(verticalIndex, horizontalIndex);
     }
 }

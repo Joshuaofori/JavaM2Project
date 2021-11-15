@@ -7,6 +7,8 @@ public abstract class Being extends SimulationObject {
 
     Nation nation;
 
+    private Map map;
+
     public Being() {
         super();
     }
@@ -48,5 +50,13 @@ public abstract class Being extends SimulationObject {
 
     public void setNation(Nation nation) {
         this.nation = nation;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
     }
 }

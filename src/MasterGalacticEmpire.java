@@ -12,4 +12,9 @@ public class MasterGalacticEmpire extends EvilMasterBeing {
         }
         return unique;
     }
+
+    @Override
+    public void move() {
+        // MASTERS ARE STATIC
+    }
 }

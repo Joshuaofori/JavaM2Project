@@ -12,4 +12,9 @@ public class MasterStormStroopers extends EvilMasterBeing {
         }
         return unique;
     }
+
+    @Override
+    public void move() {
+        // MASTERS ARE STATIC
+    }
 }

@@ -12,4 +12,9 @@ public class MasterRebel extends GoodMasterBeing {
         }
         return unique;
     }
+
+    @Override
+    public void move() {
+        // MASTERS ARE STATIC
+    }
 }
