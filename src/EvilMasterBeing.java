@@ -1,5 +1,6 @@
-public class EvilMasterBeing extends MasterBeing{
-    public EvilMasterBeing(){
+public abstract class EvilMasterBeing extends MasterBeing {
 
+    public EvilMasterBeing() {
+        super();
     }
 }

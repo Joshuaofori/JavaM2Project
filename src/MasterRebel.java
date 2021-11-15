@@ -1,12 +1,20 @@
-public class MasterRebel extends GoodMasterBeing{
+public class MasterRebel extends GoodMasterBeing {
+
     private static MasterRebel unique;
-    private MasterRebel(){
+
+    private MasterRebel() {
 
     }
-    public static MasterRebel getInstance(){
-     if(unique==null){
-         unique=new MasterRebel();
-     }
-     return unique;
+
+    public static MasterRebel getInstance() {
+        if (unique == null) {
+            unique = new MasterRebel();
+        }
+        return unique;
+    }
+
+    @Override
+    public void move() {
+        // MASTERS ARE STATIC
     }
 }

@@ -1,8 +1,8 @@
-public class CommonStormStroopers extends EvilCommonBeing {
+public class CommonRebel extends GoodCommonBeing {
 
-    public CommonStormStroopers() {
+    public CommonRebel() {
         super();
-        super.setNation(Nation.STORMTROOPERSS);
+        super.setNation(Nation.REBELS);
     }
 
     @Override
